@@ -1,5 +1,3 @@
-
-
 const OrganizationIdPage = () => {
   return (
     <div>
