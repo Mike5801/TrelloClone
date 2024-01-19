@@ -31,7 +31,6 @@ export const BoardTitleForm = ({ data }: BoartTitleFormProps) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const enableEditing = () => {
-    //TODO: Focus inputs
     setIsEditing(true);
     setTimeout(() => {
       inputRef.current?.focus();
