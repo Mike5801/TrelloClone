@@ -20,9 +20,6 @@ export const ListContainer = ({
     setOrderedData(data);
   }, [data]);
 
-
-
-
   return (
     <ol className="flex gap-x-3 h-full">
       {orderedData.map((list, index) => (
