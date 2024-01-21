@@ -5,7 +5,6 @@ import { FormSubmit } from "@/components/form/formSubmit";
 import { Button } from "@/components/ui/button";
 import { Plus, X } from "lucide-react";
 import { useAction } from "@/hooks/useAction";
-import { CreateCard } from "@/actions/create-card/schema";
 import { useRef, ElementRef, KeyboardEventHandler, forwardRef } from "react";
 import { useParams } from "next/navigation";
 import { createCard } from "@/actions/create-card";
@@ -55,12 +54,6 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
       const title = formData.get("title") as string;
       const listId = formData.get("listId") as string;
       const boardId = params.boardId as string;
-
-      console.log({
-        title,
-        listId,
-        boardId
-      })
 
       execute({ title, listId, boardId });
     };
