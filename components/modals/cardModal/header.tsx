@@ -8,7 +8,6 @@ import { Layout } from "lucide-react";
 import { useParams } from "next/navigation";
 import { ElementRef, useRef, useState } from "react";
 import { useAction } from "@/hooks/useAction";
-import { UpdateCard } from "@/actions/update-card/schema";
 import { updateCard } from "@/actions/update-card";
 import { toast } from "sonner";
 
