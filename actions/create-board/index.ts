@@ -6,6 +6,8 @@ import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/createSafeAction";
 import { CreateBoard } from "./schema";
+import { ACTION, ENTITY_TYPE } from "@prisma/client";
+import { createAuditLog } from "@/lib/createAuditLog";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth();
@@ -18,18 +20,19 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
   const { title, image } = data;
 
-  const [
-    imageId, 
-    imageThumbUrl, 
-    imageFullUrl, 
-    imageLinkHtml, 
-    imageUserName
-  ] = image.split("|");
+  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHtml, imageUserName] =
+    image.split("|");
 
-  if (!imageId || !imageThumbUrl || !imageFullUrl || !imageLinkHtml || !imageUserName) {
+  if (
+    !imageId ||
+    !imageThumbUrl ||
+    !imageFullUrl ||
+    !imageLinkHtml ||
+    !imageUserName
+  ) {
     return {
-      error: "Missing fields, Failed to create board"
-    }
+      error: "Missing fields, Failed to create board",
+    };
   }
 
   let board;
@@ -43,8 +46,15 @@ const handler = async (data: InputType): Promise<ReturnType> => {
         imageThumbUrl,
         imageFullUrl,
         imageUserName,
-        imageLinkHtml
+        imageLinkHtml,
       },
+    });
+
+    await createAuditLog({
+      entityTitle: board.title,
+      entityId: board.id,
+      entityType: ENTITY_TYPE.BOARD,
+      action: ACTION.CREATE,
     });
   } catch (error) {
     return {
