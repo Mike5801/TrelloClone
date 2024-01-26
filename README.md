@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Web app that clones Trello functionalities such as organizations, kanban boards, and the simulation of an upgrade to Pro version using NextJS, Typescript, Prisma, MySQL, Clerk and Stripe.
+<br/>
+# Landing Page
+<img src="https://i.imgur.com/Xf1csOs.png">
 
-## Getting Started
+# Dashboard with Pro
+<img src="https://i.imgur.com/VAQgRMi.png">
 
-First, run the development server:
+# Dashboard without Pro
+<img src="https://i.imgur.com/VjXf6yz.png">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Activity Logs
+<img src="https://i.imgur.com/T3mp10W.png">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Board Creation
+<img src="https://i.imgur.com/5QuAJnA.png">
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Board
+<img src="https://i.imgur.com/gGao4gs.png">
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# List and Cards
+<img src="https://i.imgur.com/9XphfWz.png">
 
-## Learn More
+# Upgrade to pro feature
+<img src="https://i.imgur.com/Tx5y8lE.png">
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
