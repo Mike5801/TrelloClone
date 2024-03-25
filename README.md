@@ -1,4 +1,5 @@
-Web app that clones Trello functionalities such as organizations, kanban boards, and the simulation of an upgrade to Pro version using NextJS, Typescript, Prisma, MySQL, Clerk and Stripe.
+Developed based on the course from <a href="https://www.youtube.com/@codewithantonio/videos">@codewithantonio</a><br/>
+Web app that clones Trello functionalities such as organizations, kanban boards, and the simulation of an upgrade to Pro version using NextJS, Typescript, Prisma, MySQL, Clerk and Stripe. 
 <br/>
 # Landing Page
 <img src="https://i.imgur.com/Xf1csOs.png">
